@@ -95,7 +95,7 @@ void arithmetic_decode(const string& input) {
         while (true) {
             if (low >= half) {
                 low -= half; high -= half; code -= half;
-            } else if (low >= half) {
+            } else if (low >= first_qrt && high < third_qrt) {
                 low -= first_qrt; high -= first_qrt; code -= first_qrt;
             } else {
                 break;
